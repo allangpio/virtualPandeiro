@@ -9,11 +9,54 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/main.js"></script>
   </head>
   <body>
-    <div class="btn">
-      <p class="btn__text">G</p>
+    <div class="wrapper">
+      <header class="header"></header>
+
+      <div class="img-container">
+        <img class="img pandeiro" src="img/pandeiro-pb.svg" alt="Pandeiro" />
+      </div>
+
+      <div class="btn-container">
+        <div class="btn-container__left">
+          <div class="btn" data-key="68" data-note="grave-abafado">
+            <p class="btn__text">GA</p>
+          </div>
+
+          <div class="btn" data-key="70" data-note="grave">
+            <p class="btn__text">G</p>
+          </div>
+        </div>
+
+        <div class="btn-container__right">
+          <div class="btn" data-key="85" data-note="tapa">
+            <p class="btn__text">T</p>
+          </div>
+
+          <div class="btn" data-key="73" data-note="rulo">
+            <p class="btn__text">R</p>
+          </div>
+
+          <div class="btn" data-key="74" data-note="platinela">
+            <p class="btn__text">P</p>
+          </div>
+
+          <div class="btn" data-key="75" data-note="platinela">
+            <p class="btn__text">P</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="btn-active"></div>
+
+    <section class="audios">
+      <audio data-key="68" src="sounds/grave-abafado.wav"></audio>
+      <audio data-key="70" src="sounds/grave.wav"></audio>
+      <audio data-key="74" src="sounds/platinela.wav"></audio>
+      <audio data-key="75" src="sounds/platinela.wav"></audio>
+      <audio data-key="85" src="sounds/tapa.wav"></audio>
+      <audio data-key="73" src="sounds/rulo.wav"></audio>
+    </section>
   </body>
 </html>
