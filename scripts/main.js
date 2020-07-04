@@ -31,7 +31,6 @@ function getKeyCode(event) {
     keyCode = event.keyCode;
   } else {
     keyCode = event.target.dataset.key;
-    console.log(event.target);
   }
   return keyCode;
 }
@@ -70,6 +69,20 @@ function initRegEvents() {
 
   // get keypress event
   window.addEventListener('keydown', playNote);
+
+  //////
+  // MODAL
+  const modal = document.querySelector('.modal');
+  const exit = document.querySelector('.exit');
+  const instructions = document.querySelector('.instructions');
+
+  exit.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  instructions.addEventListener('click', function () {
+    modal.style.display = 'block';
+  });
 }
 
 window.addEventListener('load', initRegEvents);
