@@ -1,6 +1,6 @@
 .btn {
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   position: relative;
   background: #f2f3f7;
@@ -21,13 +21,10 @@
   transition: color 0.5s ease, -webkit-transform 0.01s ease;
   transition: transform 0.01s ease, color 0.5s ease;
   transition: transform 0.01s ease, color 0.5s ease, -webkit-transform 0.01s ease;
+  pointer-events: none;
 }
 
 .btn-active {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #f2f3f7;
   /* Inner shadow / Input Form */
   -webkit-transform: translateY(3%);
           transform: translateY(3%);
@@ -49,7 +46,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 3.2rem;
 }
 
 .btn-container__left {
@@ -57,7 +54,7 @@
   display: grid;
   -ms-grid-columns: 45% 45%;
       grid-template-columns: 45% 45%;
-  gap: 10%;
+  gap: 20%;
   -ms-grid-row-align: center;
       align-self: center;
 }
@@ -69,7 +66,7 @@
       grid-template-columns: 45% 45%;
   -ms-grid-rows: 45% 45%;
       grid-template-rows: 45% 45%;
-  gap: 10%;
+  gap: 20%;
 }
 
 * {
@@ -83,7 +80,7 @@ body {
   background-color: #ccc;
   height: 100vh;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   font-family: 'Roboto', sans-serif;
   font-family: Roboto;
   font-style: normal;
@@ -96,9 +93,10 @@ body {
 
 .wrapper {
   height: 100%;
+  width: 100%;
   background: #f2f3f7;
-  -webkit-box-shadow: -6.8px -6.8px 18.1333px #ffffff, 6.8px 6.8px 18.1333px #becde2;
-          box-shadow: -6.8px -6.8px 18.1333px #ffffff, 6.8px 6.8px 18.1333px #becde2;
+  -webkit-box-shadow: -1px -1px 8px #ffffff, 1px 1px 8px #becde2;
+          box-shadow: -1px -1px 8px #ffffff, 1px 1px 8px #becde2;
   border-radius: 10px;
   display: -ms-grid;
   display: grid;
@@ -109,6 +107,10 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.img-container {
+  margin: 0 auto;
 }
 
 .img-container .img {

@@ -31,6 +31,7 @@ function getKeyCode(event) {
     keyCode = event.keyCode;
   } else {
     keyCode = event.target.dataset.key;
+    console.log(event.target);
   }
   return keyCode;
 }
