@@ -54,6 +54,12 @@ function removePlayingClass(event) {
   event.target.classList.remove('btn-active');
 }
 
+// Function to start tracking the touchs
+function touchStart(event) {
+  event.preventDefault();
+  playNote(event);
+}
+
 ////////////////////////////////////
 // Event listeners
 
@@ -65,12 +71,14 @@ function initRegEvents() {
   // click with mouse
   btns.forEach((btn) => {
     btn.addEventListener('click', playNote);
+    btn.addEventListener('touchstart', touchStart);
     btn.addEventListener('transitionend', removePlayingClass);
   });
 
   // get keypress event
   window.addEventListener('keydown', playNote);
-  window.addEventListener('touchstart', playNote);
+  // window.addEventListener('touchstart', playNote);
+  // window.addEventListener('touchstart', touchStart);
 
   //////
   // MODAL
