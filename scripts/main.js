@@ -58,7 +58,6 @@ function removePlayingClass(event) {
 function touchStart(event) {
   event.preventDefault();
   let touches = event.touches;
-  console.log(touches, touches.length);
   for (i = 0; i < touches.length; i++) {
     playNote(event);
   }
