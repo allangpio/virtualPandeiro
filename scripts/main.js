@@ -57,10 +57,11 @@ function removePlayingClass(event) {
 // Function to start tracking the touchs
 function touchStart(event) {
   event.preventDefault();
-  let touches = event.touches;
-  for (i = 0; i < touches.length; i++) {
-    playNote(event);
-  }
+  // let touches = event.touches;
+  // for (i = 0; i < touches.length; i++) {
+  //   playNote(event);
+  // }
+  playNote(event);
 }
 
 ////////////////////////////////////
