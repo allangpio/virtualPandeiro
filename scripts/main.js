@@ -38,6 +38,7 @@ function getKeyCode(event) {
 // Function to play note audio
 function playNoteAudio(noteKeyCode) {
   const note = document.querySelector(`audio[data-key="${noteKeyCode}"]`);
+
   note.currentTime = 0;
   note.play();
 }
@@ -64,12 +65,12 @@ function initRegEvents() {
   // click with mouse
   btns.forEach((btn) => {
     btn.addEventListener('click', playNote);
-    btn.addEventListener('touchstart', playNote);
     btn.addEventListener('transitionend', removePlayingClass);
   });
 
   // get keypress event
   window.addEventListener('keydown', playNote);
+  window.addEventListener('touchstart', playNote);
 
   //////
   // MODAL
