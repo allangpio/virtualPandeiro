@@ -9,6 +9,10 @@
   -webkit-transition: all 0.01s;
   transition: all 0.01s;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .btn__text {

@@ -64,6 +64,7 @@ function initRegEvents() {
   // click with mouse
   btns.forEach((btn) => {
     btn.addEventListener('click', playNote);
+    btn.addEventListener('touchstart', playNote);
     btn.addEventListener('transitionend', removePlayingClass);
   });
 

@@ -9,6 +9,7 @@
   box-shadow: -6.8px -6.8px 18.1333px #ffffff, 6.8px 6.8px 18.1333px #becde2;
   transition: all 0.01s;
   cursor: pointer;
+  user-select: none;
 
   &__text {
     position: absolute;
