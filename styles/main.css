@@ -71,6 +71,11 @@
   padding: 0;
 }
 
+html {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 body {
   background-color: #ccc;
   height: 100vh;
