@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Levadas</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <h1>Gerador de Levadas</h1>
+    <main class="section-loop">
+      <div class="pandeiro">
+        <div class="grave-abafado btn-wrapper">
+          <h3>Grave abafado</h3>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+        </div>
+        <div class="grave btn-wrapper">
+          <h3>Grave</h3>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+        </div>
+        <div class="platinela btn-wrapper">
+          <h3>Platinelas</h3>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+        </div>
+        <div class="tapa btn-wrapper">
+          <h3>Tapa</h3>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+          <div class="input"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="play active">
+          <div class="symbol symbol-active"></div>
+        </div>
+        <div class="bpm">
+          <label for="number">BPM</label>
+          <input
+            type="range"
+            min="60"
+            max="180"
+            value="120"
+            name="number"
+            id="number"
+            class="bpm__range"
+          />
+          <p id="bpm-value"></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/tone"></script>
+
+    <script src="scripts/loop.js"></script>
+  </body>
+</html>
+
+<!-- <div class="pandeiro">
+  <div class="grave">
+    <label for="check1"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check1"
+      class="input input-grave"
+    />
+    <label for="check2"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check2"
+      class="input input-grave"
+    />
+    <label for="check3"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check3"
+      class="input input-grave"
+    />
+    <label for="check4"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check4"
+      class="input input-grave"
+    />
+    <label for="check5"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check5"
+      class="input input-grave"
+    />
+    <label for="check6"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check6"
+      class="input input-grave"
+    />
+    <label for="check7"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check7"
+      class="input input-grave"
+    />
+    <label for="check8"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check8"
+      class="input input-grave"
+    />
+  </div>
+
+  <div class="grave-abafado">
+    <label for="check9"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check9"
+      class="input input-abafado"
+    />
+    <label for="check10"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check10"
+      class="input input-abafado"
+    />
+    <label for="check11"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check11"
+      class="input input-abafado"
+    />
+    <label for="check12"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check12"
+      class="input input-abafado"
+    />
+    <label for="check13"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check13"
+      class="input input-abafado"
+    />
+    <label for="check14"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check14"
+      class="input input-abafado"
+    />
+    <label for="check15"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check15"
+      class="input input-abafado"
+    />
+    <label for="check16"></label>
+    <input
+      type="checkbox"
+      name=""
+      id="check16"
+      class="input input-abafado"
+    />
+  </div>
+  <div class="platinela">
+    <input
+      type="checkbox"
+      name=""
+      id="check17"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check18"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check19"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check20"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check21"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check22"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check23"
+      class="input input-platinela"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check24"
+      class="input input-platinela"
+    />
+  </div>
+  <div class="tapa">
+    <input
+      type="checkbox"
+      name=""
+      id="check25"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check26"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check27"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check28"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check29"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check30"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check31"
+      class="input input-tapa"
+    />
+    <input
+      type="checkbox"
+      name=""
+      id="check32"
+      class="input input-tapa"
+    />
+  </div>
+</div> -->
