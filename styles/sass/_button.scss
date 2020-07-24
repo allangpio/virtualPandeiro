@@ -225,6 +225,8 @@ body {
   color: $color-grey;
   height: 100vh;
   width: 100%;
+  @media screen and (max-width: 900px) {
+  }
 }
 
 h1 {
@@ -234,6 +236,13 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2rem;
+  @media screen and (max-width: 900px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 2.5rem;
+    margin-bottom: -1rem;
+  }
 }
 
 .section-loop {
@@ -244,26 +253,53 @@ h1 {
   .pandeiro {
     background-color: $color-grey;
     padding: 1rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
   }
   h3 {
     color: $color-bg;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 900px) {
+      grid-row: span 2;
+    }
   }
 
   .btn-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 8rem);
+    grid-template-columns: 81px repeat(8, 1fr);
+    gap: 1rem;
     place-items: center start;
     margin-bottom: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    position: relative;
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 70px repeat(8, 1fr);
+    }
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 70px repeat(4, 1fr);
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -1rem;
+          right: 0;
+          left: 0;
+          height: 2px;
+          background-color: rgba($color-bg, 0.2);
+        }
+      }
+    }
   }
 
   .input {
-    height: 3rem;
-    width: 3rem;
+    height: 5vw;
+    width: 5vw;
     background-color: $color-grey;
-
-    margin-left: 1rem;
 
     border-radius: 8px;
     box-shadow: 3px 3px 8px rgba(#aaa, 0.52), -1px -1px 8px rgba(#333, 0.25);
@@ -271,10 +307,14 @@ h1 {
     transition: all 0.2s ease;
     cursor: pointer;
     user-select: none;
+    @media screen and (max-width: 700px) {
+      height: 8vw;
+      width: 8vw;
+    }
   }
 
   .checked {
-    background: #a8cbff;
+    background: #b48e98;
     box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.36),
       -4px -4px 8px rgba(255, 255, 255, 0.36);
   }
@@ -292,6 +332,7 @@ h1 {
   margin-top: 1rem;
   padding: 1rem;
   width: max-content;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
@@ -300,7 +341,7 @@ h1 {
   color: $color-bg;
   &__range {
     appearance: none;
-    width: 12.5rem;
+    width: 20vw;
     height: 0.2rem;
     border-radius: 100px;
     margin: 0 1rem;
@@ -335,8 +376,12 @@ h1 {
 
 .play {
   margin-top: 1rem;
-  height: 4rem;
-  width: 4rem;
+  height: 12vw;
+  width: 12vw;
+
+  max-height: 5rem;
+  max-width: 5rem;
+
   background-color: transparent;
   border: 0.25rem solid $color-grey;
   border-radius: 50%;
@@ -364,14 +409,18 @@ h1 {
   background-image: url('../img/pause.svg') !important;
   top: 50% !important;
   left: 53% !important;
+  background-size: contain;
 }
 
 .symbol {
   background-image: url('../img/play.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 9vw;
+  width: 9vw;
+
+  max-height: 1.5rem;
+  max-width: 1.5rem;
   position: absolute;
   top: 50%;
   left: 55%;
